@@ -1,1 +1,1 @@
-# java-design-patterns
+代码是随意写的,如果觉得有错的地方请自行绕开。
