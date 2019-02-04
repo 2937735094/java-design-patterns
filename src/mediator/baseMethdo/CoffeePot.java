@@ -3,7 +3,6 @@ package mediator.baseMethdo;
 import mediator.mediator.Mediator;
 
 public class CoffeePot {
-    // 是否有必要？
     private Mediator mediator;
 
     public CoffeePot(Mediator mediator) {
@@ -11,6 +10,14 @@ public class CoffeePot {
     }
 
     public void makeCoffee() {
-        System.out.println("开始准备咖啡");
+        mediator.makeCoffee();
+    }
+
+    public void doMake(int day) {
+    	if (day != 6 && day!= 7) {
+            System.out.println("开始准备咖啡");
+        } else {
+            System.out.println("今天是周" + day + " [周末不提供咖啡]");
+        }
     }
 }

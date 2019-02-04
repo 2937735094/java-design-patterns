@@ -3,7 +3,6 @@ package mediator.baseMethdo;
 import mediator.mediator.Mediator;
 
 public class Alarm {
-    // 是否有必要？
     private Mediator mediator;
 
     public Alarm(Mediator mediator) {
@@ -11,6 +10,8 @@ public class Alarm {
     }
 
     public void rang() {
-        System.out.println("闹钟响了");
+    	// 这里可以做一些其他工作
+    	System.out.println("响铃");
+        mediator.rang();
     }
 }

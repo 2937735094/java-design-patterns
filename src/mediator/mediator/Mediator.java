@@ -20,25 +20,15 @@ public class Mediator {
     private CoffeePot coffeePot;
 
     // 闹钟
-    public void alarmOnEvent() {
+    public void rang() {
         // 通知咖啡壶开始煮咖啡, 周末不要供应咖啡
-        alarm.rang();
-        coffeePotOnEvent();
-    }
-
-    // 日历
-    public int calendarOnEvent() {
-        return calendar.getDay();
+        coffeePot.makeCoffee();
     }
 
     // 咖啡壶
-    public void coffeePotOnEvent() {
-        int day = calendarOnEvent();
-        if (day != 6 && day!= 7) {
-            coffeePot.makeCoffee();
-        } else {
-            System.out.println("今天是周" + day + " [周末不提供咖啡]");
-        }
+    public void makeCoffee() {
+        int day = calendar.getDay();
+        coffeePot.doMake(day);
     }
 
     public void registerAlarm(Alarm alarm) {
