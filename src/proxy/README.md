@@ -35,7 +35,7 @@
 http://www.runoob.com/design-pattern/proxy-pattern.html
 ### 关于JDK和CGLIB的动态代理简要描述
     Java Dynamic Proxy：
-        特点: 只能对接口进行代理  
+        特点: 要求被代理的类至少实现了一个接口  
         采用的方式: 通过反射机制进行调用
         使用方式: 
             1.创建一个实现了InvocationHandler接口的拦截类
